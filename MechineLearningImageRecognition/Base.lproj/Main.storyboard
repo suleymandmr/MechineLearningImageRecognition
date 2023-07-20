@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MechineLearningImageRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1I-OL-qrR">
+                                <rect key="frame" x="16" y="75" width="361" height="441"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="1pU-rj-fgC"/>
+                                    <constraint firstAttribute="height" constant="441" id="SOL-AI-UDN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mechine Learning Image Recognition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEI-UO-35t">
+                                <rect key="frame" x="36" y="533" width="321" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Xve-Za-vUw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWP-vK-wZD">
+                                <rect key="frame" x="123" y="669" width="147" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="PxE-K3-inU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change "/>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJm-eq-NSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kEI-UO-35t" firstAttribute="top" secondItem="M1I-OL-qrR" secondAttribute="bottom" constant="17" id="0gU-dY-zbZ"/>
+                            <constraint firstItem="kEI-UO-35t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="2Rg-0r-lvy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eWP-vK-wZD" secondAttribute="bottom" constant="60" id="2S5-Wl-rwb"/>
+                            <constraint firstItem="M1I-OL-qrR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4lT-DT-H6B"/>
+                            <constraint firstItem="M1I-OL-qrR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9HY-sn-zM6"/>
+                            <constraint firstItem="eWP-vK-wZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="TCP-tn-wl0"/>
+                            <constraint firstItem="eWP-vK-wZD" firstAttribute="top" secondItem="kEI-UO-35t" secondAttribute="bottom" constant="8" id="TXv-bY-w3V"/>
+                            <constraint firstItem="M1I-OL-qrR" firstAttribute="centerX" secondItem="kEI-UO-35t" secondAttribute="centerX" id="cZU-bt-zOm"/>
+                            <constraint firstItem="M1I-OL-qrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lUt-bj-VUL"/>
+                            <constraint firstItem="kEI-UO-35t" firstAttribute="centerX" secondItem="eWP-vK-wZD" secondAttribute="centerX" id="oyu-6T-a95"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="M1I-OL-qrR" id="BQ1-Nc-YOH"/>
+                        <outlet property="resultLabel" destination="kEI-UO-35t" id="wOn-l8-V7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
